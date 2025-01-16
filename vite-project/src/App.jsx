@@ -1,7 +1,11 @@
+import Name from "./Vivek.jsx"
 function App() {
 
   return (
-   <h1>Vivek this side with vite | vp</h1>
+    <>
+    <p>Heloo how all the things are going on</p>
+    <Name/>
+    </>
   )
 }
 
