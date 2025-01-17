@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.one{
+    background-color: red;
+}
+.two{
+    background-color: blue;
+}
+.three{
+    background-color: green;
+}
+.four{
+    background-color: yellow;
+}
+    </style>
+</head>
+
+<body>
+
+    <button class="one" onclick="color()">red</button>
+    <button class="two" onclick="color2()">blue</button>
+    <button class="three" onclick="color3()">greeen</button>
+    <button class="four" onclick="color4()">yellow</button>
+
+    <script>
+        function color() {
+            let button = document.querySelector(".one");
+            console.log(button.innerHTML);
+            let buttoncolor = window.getComputedStyle(button)
+            document.body.style.backgroundColor = buttoncolor.backgroundColor;
+
+        }
+        function color2() {
+            let button = document.querySelector(".two");
+            console.log(button.innerHTML);
+            let buttoncolor = window.getComputedStyle(button)
+            document.body.style.backgroundColor = buttoncolor.backgroundColor;
+
+        }
+        function color3() {
+            let button = document.querySelector(".three");
+            console.log(button.innerHTML);
+            let buttoncolor = window.getComputedStyle(button)
+            document.body.style.backgroundColor = buttoncolor.backgroundColor;
+
+        }
+        function color4() {
+            let button = document.querySelector(".four");
+            console.log(button.innerHTML);
+            let buttoncolor = window.getComputedStyle(button)
+            document.body.style.backgroundColor = buttoncolor.backgroundColor;
+
+        }
+    </script>
+</body>
+
+</html>
