@@ -14,6 +14,7 @@ function App() {
   const options = Object.keys(currencyInfos)
 
 
+
   const swap = () => {
     setTo(from)
     setFrom(to)
@@ -23,11 +24,13 @@ function App() {
 
   const convert = () => {
     setConvertedAmount(amount * currencyInfos[to])
+    // console.log(options);
   }
 
   return (
-    <div>
-      <div>
+    <div  className="bg-cover bg-center h-full w-full p-10" style={{ margin:"0px", padding:"0px" ,backgroundImage: 'url("https://png.pngtree.com/thumb_back/fh260/background/20230630/pngtree-d-rendering-of-a-glowing-digital-business-interface-showcasing-finance-innovation-image_3694007.jpg")' }}>
+     
+      <div className='p-10 bg-red-400 w-192 rounded-lg relative'>
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -37,9 +40,8 @@ function App() {
           <div>
             <InputBox
 
-              label="from"
+              label="From"
               amount={amount}
-
               onAmountChange={(amount) => setAmount(amount)}
               selectCurrency={from}
               currencyInfo={options}
@@ -49,6 +51,7 @@ function App() {
           </div>
           <div>
             <button
+            className='bg-yellow-500 pl-5 pr-5 rounded-lg pt-2  pb-2'
               type="button"
               onClick={swap}
             >
@@ -57,7 +60,7 @@ function App() {
           </div>
           <div>
             <InputBox
-              label="to"
+              label="To"
               amount={convertedAmount}
               onAmountChange={(amount) => setConvertedAmount(amount)}
               selectCurrency={to}
@@ -66,7 +69,7 @@ function App() {
               amountDisable
             ></InputBox>
           </div>
-          <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
+          <button type="submit" className="w-full mt-5 bg-blue-600 text-white px-4 py-3 rounded-lg">
             Convert {from.toUpperCase()} to {to.toUpperCase()}
           </button>
         </form>

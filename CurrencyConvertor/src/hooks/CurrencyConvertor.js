@@ -7,6 +7,7 @@ function useCurrencyConvertor(currency) {
             .then((e) =>  e.json() )
             .then((re) => setData(re[currency]))
     
+    
 
     }, [currency])
     return data;
