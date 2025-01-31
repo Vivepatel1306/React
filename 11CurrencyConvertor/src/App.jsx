@@ -54,11 +54,11 @@ function App() {
                         </div>
                         <div className="relative w-full h-0.5">
                             <button
+
                                 type="button"
-                                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
+                                className="opacity-85 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjUvPhzhSrB2vehfc5CumpGJMKRknrLrdiNA&s')] bg-no-repeat bg-center bg-contain p-4 border-none w-24 h-24 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
                                 onClick={swap}
                             >
-                                swap
                             </button>
                         </div>
                         <div className="w-full mt-1 mb-4">
