@@ -32,21 +32,21 @@
 import React from "react";
 import { useState } from "react";
 
-const Box = ()=>{
+const Box = () => {
 
-    const [changer , setChange] = useState(true)
+    const [changer, setChange] = useState(true)
     return (
         <>
-        <div id="container" className={` w-[70vw] h-[100vh] border bg-white`}>
-            <div id="box" className={` w-[50%] h-[50%] m-auto border border-blue-900 mt-16 ${changer?" bg-green-900":"bg-white"}`}>
-                <h1 className={`${changer?"text-yellow-500":"text-black"} `}>This is s heding</h1>
+            <div id="container" className={` w-[70vw] h-[100vh] border bg-white`}>
+                <div id="box" className={` w-[50%] h-[50%] m-auto border border-blue-900 mt-16 ${changer ? " bg-green-900" : "bg-white"}`}>
+                    <h1 className={`${changer ? "text-yellow-500" : "text-black"} `}>This is s heding</h1>
+                </div>
+                <button className="border border-green-700 w-20 h-15 mt-5 text-black"
+                    onClick={() => setChange(!changer)}
+                >
+                    Tab
+                </button>
             </div>
-            <button className="border border-green-700 w-20 h-15 mt-5 text-black"
-            onClick={()=>setChange(!changer)}
-            >
-                Tab
-            </button>
-        </div>
         </>
     )
 }
