@@ -36,8 +36,8 @@ function Home() {
         if (loading) return
         setLoading(true)
         try {
-            const searchResults = await searchMovies(searchquery)
-            setMovies(searchResults)
+            const searchResult=await searchMovies(searchquery)
+            setMovies(searchResult)
             setError(null)
         }
         catch (err) {
@@ -49,7 +49,7 @@ function Home() {
             setLoading(false)
         }
 
-        setSearchquery("")
+        
     }
 
     return (
